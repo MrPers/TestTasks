@@ -1,0 +1,87 @@
+﻿Develop an ASP.NET Web API application
+ 
+1. The application must have 2 endpoints:
+- /api/v1/check-person POST
+request:
+{
+  "personName": "str",
+  "episodeName": "str"
+}
+response:
+true - if the specified character was in the specified episode
+false - if it was not
+404 not found - if either the name of the character or the name of the episode does not exist.
+- /api/v1/person?name=person GET
+request:
+GET parameter name
+response:
+{
+             "name": "str",
+  "status": "str",
+  "species": "str",
+"type": "str",
+  "gender": "str",
+  "origin": {
+"name": "str",
+            "type": "str",
+             "dimension": "str"
+  },
+}
+404 - if the name of the character is not found
+2. The application must have a Dockerfile
+3. Data source https://rickandmortyapi.com/documentation.
+Do not use third-party libraries to get data from the source.
+Evaluation criteria:
+● Correct operation of the program (tests will be performed on the running docker container)
+● Clean code
+● Architectural solutions
+Additional points:
+● Implement the retention of repeated requests without referring to an external system.
+ 
+ 
+
+
+Database
+
+1. Design a database for business in the field of air transportation (top level for 5-7 tables)
+2. Write requests
+● List of tickets with customer data.
+
+	SELECT [tickets].[id]
+		,[tickets].[seat_no] AS 'seat number'
+		,[tickets].[time_sale] AS 'time sale'
+		,[persons].[first_name] AS 'first name'	
+		,[persons].[last_name] AS 'last name'
+		,[persons].[phone]
+		,[tickets].[flights_id] AS 'flights id'
+	FROM [AirTransportation].[dbo].[tickets]
+	INNER JOIN [AirTransportation].[dbo].[persons] ON [persons].[id] = [tickets].[person_id];
+	
+● Last 5 sold tickets
+
+SELECT TOP (5) [id]
+      ,[seat_no]
+      ,[time_sale]
+      ,[person_id]
+      ,[flights_id]
+  FROM [AirTransportation].[dbo].[tickets]
+  ORDER BY [time_sale] DESC
+  
+● Top 3 customers by frequency of flights
+
+WITH totals AS (
+	SELECT TOP(3) [persons].[id]
+		,[persons].[first_name]
+		,[persons].[last_name]
+		,[persons].[phone]
+       ,(SELECT COUNT(*) FROM [AirTransportation].[dbo].[tickets] WHERE [persons].[id] = [tickets].[person_id]) AS Customer
+       FROM [AirTransportation].[dbo].[persons]
+       ORDER BY Customer DESC  
+)
+SELECT TOP(3)
+	[persons].[id] AS 'id'
+	,[persons].[first_name] AS 'seat number'
+	,[persons].[last_name] AS 'last name'
+	,[persons].[phone] AS 'phone'
+FROM
+[AirTransportation].[dbo].[persons]
