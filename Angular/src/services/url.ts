@@ -8,7 +8,7 @@ import { AuthService } from './auth';
   providedIn: 'root'
 })
 export class URLService {
-  apiURL = "http://localhost:1000/";
+  apiURL = "https://localhost:1001/";
 
   constructor(private http:HttpClient, private authService: AuthService ) {}
 
@@ -17,7 +17,7 @@ export class URLService {
   };
   
   getSecrets() : Observable<string> {
-    return this.http.get(this.apiURL + 'site/get-secrets', { responseType: 'text', headers: this.authService.getAuthorizationHeaderValue()});
+    return this.http.get(this.apiURL + 'site/get-secrets', { responseType: 'text'});
   };
 
   // addCoin(name: string, ticks: number) : Observable<any> {
