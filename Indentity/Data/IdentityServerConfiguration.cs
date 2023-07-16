@@ -1,4 +1,5 @@
-﻿using Duende.IdentityServer.Models;
+﻿using Duende.IdentityServer;
+using Duende.IdentityServer.Models;
 using IdentityModel;
 
 namespace Indentity.Data
@@ -12,30 +13,30 @@ namespace Indentity.Data
             {
                 ClientId = "client_id",   
                 ClientSecrets = {new Secret("client_secret".ToSha256())},
-                AllowedGrantTypes =  GrantTypes.ClientCredentials,
+                AllowedGrantTypes =  GrantTypes.ClientCredentials,  // scopes that client has access to
                 AllowedScopes =
                 {
                     "OrdersAPI"
                 }
-            //},
-            //new Client
-            //{
-            //    ClientId = "client_angular_id", //Идентификатор клиента, инициировавшего запрос.
-            //    RequireClientSecret = false, //Указывает, нужен ли этому клиенту секрет для запроса токенов из конечной точки токена
-            //    RequireConsent = false, //Указывает, требуется ли экран согласия
-            //    RequirePkce = true, //Указывает, нужен ли этому клиенту секрет для запроса токенов из конечной точки токена
-            //    AllowedGrantTypes =  GrantTypes.Code, //Задает типы грантов, которые разрешено использовать клиенту
-            //    AllowedCorsOrigins = { "http://localhost:4200" },
-            //    RedirectUris = { "http://localhost:4200/callback", "http://localhost:4200/refresh" },
-            //    PostLogoutRedirectUris = { "http://localhost:4200" },
-            //    //AllowOfflineAccess = true,//Определяет, может ли этот клиент запрашивать токены обновления
-            //    //AccessTokenLifetime = 300, //Время жизни токена доступа в секундах(по умолчанию 3600 секунд / 1 час)
-            //    AllowedScopes =
-            //    {
-            //        "OrdersAPI",
-            //        IdentityServerConstants.StandardScopes.OpenId,
-            //        IdentityServerConstants.StandardScopes.Profile
-            //    }
+            },
+            new Client
+            {
+                ClientId = "client_angular_id", //Идентификатор клиента, инициировавшего запрос.
+                RequireClientSecret = false, //Указывает, нужен ли этому клиенту секрет для запроса токенов из конечной точки токена
+                RequireConsent = false, //Указывает, требуется ли экран согласия
+                RequirePkce = true, //Указывает, нужен ли этому клиенту секрет для запроса токенов из конечной точки токена
+                AllowedGrantTypes =  GrantTypes.Code, //Задает типы грантов, которые разрешено использовать клиенту
+                AllowedCorsOrigins = { "http://localhost:4200" },
+                RedirectUris = { "http://localhost:4200/callback", "http://localhost:4200/refresh" },
+                PostLogoutRedirectUris = { "http://localhost:4200" },
+                //AllowOfflineAccess = true,//Определяет, может ли этот клиент запрашивать токены обновления
+                //AccessTokenLifetime = 300, //Время жизни токена доступа в секундах(по умолчанию 3600 секунд / 1 час)
+                AllowedScopes =
+                {
+                    "OrdersAPI",
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile
+                }
             }
         };
 
@@ -46,19 +47,14 @@ namespace Indentity.Data
 
         public static IEnumerable<IdentityResource> GetIdentityResources() =>
             new List<IdentityResource> {
-                new IdentityResources.OpenId()
-                //new IdentityResources.Profile()
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile()
             };
 
-        //public static IEnumerable<ApiScope> GetApiScopes() =>
-        //    new List<ApiScope> {
-        //        new ApiScope("OrdersAPI")
-        //    };
-
-        //public static IEnumerable<ApiScope> GetApiScopes() =>
-        //    new List<ApiScope> {
-        //        new ApiScope(ApiName)
-        //    };
+        public static IEnumerable<ApiScope> GetApiScopes() =>
+            new List<ApiScope> {
+                new ApiScope("OrdersAPI")
+            };
 
         //    new Client
         //    {

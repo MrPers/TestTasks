@@ -15,25 +15,23 @@ namespace Client
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
+            //builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddHttpClient();
 
             var app = builder.Build();
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
-            app.MapControllers();
+            //app.MapControllers();
             //app.Run();
 
             while (true)
             {
                 await Task.Delay(2000);
                 await ServerRequest(app.Services.CreateScope());
-
             }
-
         }
 
 
@@ -44,15 +42,16 @@ namespace Client
 
             // retrieve to Identity
             var authClient = httpClient.CreateClient();
-
-            var discaveryDocument = await authClient.GetDiscoveryDocumentAsync("https://localhost:10001");
+            var discoveryDocument = await authClient.GetDiscoveryDocumentAsync("https://localhost:10001");
 
             var tokenResponse = await authClient.RequestClientCredentialsTokenAsync(
                 new ClientCredentialsTokenRequest
                 {
-                    Address = discaveryDocument.TokenEndpoint,
+                    Address = discoveryDocument.TokenEndpoint,
+
                     ClientId = "client_id",
                     ClientSecret = "client_secret",
+
                     Scope = "OrdersAPI"
                 });
 

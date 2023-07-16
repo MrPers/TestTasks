@@ -49,7 +49,7 @@ namespace Indentity
                 .AddInMemoryClients(IdentityServerConfiguration.GetClients())
                 .AddInMemoryApiResources(IdentityServerConfiguration.GetApiResources())
                 .AddInMemoryIdentityResources(IdentityServerConfiguration.GetIdentityResources())
-                //.AddInMemoryApiScopes(IdentityServerConfiguration.GetApiScopes())
+                .AddInMemoryApiScopes(IdentityServerConfiguration.GetApiScopes())
                 .AddDeveloperSigningCredential();
 
             //services.AddSingleton<ICorsPolicyService>((container) =>
@@ -57,15 +57,17 @@ namespace Indentity
             //    var logger = container.GetRequiredService<ILogger<DefaultCorsPolicyService>>();     //CORE от IS4
             //    return new DefaultCorsPolicyService(logger)
             //    {
-            //        AllowedOrigins = { "http://localhost:4200" }
+            //        AllowedOrigins = { "https://localhost:1001" }
             //    };
             //});
 
+            //// add services CORS
+            //services.AddCors();
 
-            services.AddControllersWithViews();
+            //services.AddControllersWithViews();
 
-            //services.AddControllersWithViews()
-            //    .AddRazorRuntimeCompilation();
+            services.AddControllersWithViews()
+                .AddRazorRuntimeCompilation();
         }
 
         public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -77,14 +79,16 @@ namespace Indentity
             }
 
             app.UseRouting();
-            app.UseAuthentication();
-            app.UseAuthorization();
             app.UseIdentityServer();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
             });
+
+            //// add services CORS
+            //app.UseCors(builder => builder
+            //    .AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
         }
 
         private static async Task SeedDatabaseAsync(WebApplication host)
