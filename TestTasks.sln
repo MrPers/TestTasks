@@ -46,13 +46,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelayedStreams", "DelayedSt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Indentity", "Indentity", "{A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indentity", "Indentity\Indentity.csproj", "{39285D34-687E-4799-A475-448811368FC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indentity", "Indentity\Indentity.csproj", "{39285D34-687E-4799-A475-448811368FC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{72D19A3A-6AF9-4CA5-87EC-252328A81F0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{72D19A3A-6AF9-4CA5-87EC-252328A81F0A}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Angular", "Angular\Angular.esproj", "{AC8E292C-3EC9-4393-AC23-F3AA3904141E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{93D33413-3DBA-4E50-97C5-D621670A54F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{93D33413-3DBA-4E50-97C5-D621670A54F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "epam", "epam", "{F7986C4E-B59F-44A4-B959-56F83B531143}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Services", "Northwind.Services\Northwind.Services.csproj", "{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Services.Ado", "Northwind.Services.Ado\Northwind.Services.Ado.csproj", "{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Services.Ado.Tests", "Northwind.Services.Ado.Tests\Northwind.Services.Ado.Tests.csproj", "{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -122,6 +133,18 @@ Global
 		{93D33413-3DBA-4E50-97C5-D621670A54F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D33413-3DBA-4E50-97C5-D621670A54F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D33413-3DBA-4E50-97C5-D621670A54F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +165,9 @@ Global
 		{72D19A3A-6AF9-4CA5-87EC-252328A81F0A} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
 		{AC8E292C-3EC9-4393-AC23-F3AA3904141E} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
 		{93D33413-3DBA-4E50-97C5-D621670A54F5} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
+		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D} = {F7986C4E-B59F-44A4-B959-56F83B531143}
+		{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B} = {F7986C4E-B59F-44A4-B959-56F83B531143}
+		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1} = {F7986C4E-B59F-44A4-B959-56F83B531143}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0B254F9-0276-446A-84DC-B6B36CB220F8}
