@@ -7,34 +7,22 @@ public class Program
 {
     public static async Task Main()
     {
+        MyClassI a = new A();
+        MyClassI b = new B();
+        List<Task> list = new List<Task>()
+        {
+            a.Execute(),
+            b.Execute()
+        };
 
-        Console.ReadLine();
+        //Task.WaitAll(list.ToArray());
+
+        foreach (Task x in list)
+        {
+            await x;
+        }
     }
 }
-
-//var ar = new string[] { "dfdf", "123", "456" };
-
-//var a = ar[.. 0];
-//var b = ar[2..^0];
-//var c = ar[2^0];
-//var g = ar[^0];
-
-//___________________________
-
-//MyClassI a = new A();
-//MyClassI b = new B();
-//List<Task> list = new List<Task>()
-//{
-//    a.Execute(),
-//    b.Execute()
-//};
-
-////Task.WaitAll(list.ToArray());
-
-//foreach (Task x in list)
-//{
-//    await x;
-//}
 
 interface MyClassI
 {

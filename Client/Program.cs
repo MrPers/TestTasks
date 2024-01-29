@@ -56,11 +56,12 @@ namespace Client
                 });
 
             // retrieve to Server
-            var serverClient = httpClient.CreateClient();
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
 
-            serverClient.SetBearerToken(tokenResponse.AccessToken);
-
-            var response = await serverClient.GetAsync("https://localhost:1001/site/get-secrets");
+            // Pass the handler to httpclient(from you are calling api)
+            HttpClient client = new HttpClient(clientHandler);
+            var response = await client.GetAsync("https://localhost:1001/site/get-secrets");
 
             //if (!response.IsSuccessStatusCode)
             //{
@@ -74,7 +75,7 @@ namespace Client
             Console.WriteLine(messag);
 
             HttpContent httpContent = new StringContent("");
-            response = await serverClient.PostAsync("https://localhost:1001/site/post-secrets", httpContent);
+            response = await client.PostAsync("https://localhost:1001/site/post-secrets", httpContent);
 
             messag = await response.Content.ReadAsStringAsync();
 

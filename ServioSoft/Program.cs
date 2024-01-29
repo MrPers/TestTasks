@@ -8,32 +8,32 @@ public class Program
     {
         using (var context = new MyDbContext())
         {
-            //List<Company> companys = new List<Company>()
-            //    {
-            //        new Company(){CompanyName = "ExpertSolution"},
-            //        new Company(){CompanyName = "ServioSoft" },
-            //        new Company(){CompanyName = "Apple" }
-            //    };
+            List<Company> companys = new List<Company>()
+                {
+                    new Company(){CompanyName = "ExpertSolution"},
+                    new Company(){CompanyName = "ServioSoft" },
+                    new Company(){CompanyName = "Apple" }
+                };
 
-            //await context.GetCompanies.AddRangeAsync(companys);
-            //await context.SaveChangesAsync();
+            await context.GetCompanies.AddRangeAsync(companys);
+            await context.SaveChangesAsync();
 
-            //List<Guest> guests = new List<Guest>()
-            //    {
-            //        new Guest(){CompanyID = 1, Name = "Іван Василів"},
-            //        new Guest(){CompanyID = 1, Name = "Петро Симонович"},
-            //        new Guest(){CompanyID = 2, Name = "Василь Пупкін"},
-            //        new Guest(){CompanyID = 3, Name = "Сергій Іванов"},
-            //        new Guest(){CompanyID = 2, Name = "Роман Пушко"},
-            //        new Guest(){CompanyID = 1, Name = "Станіслав Мотужко"},
-            //        new Guest(){CompanyID = 1, Name = "Рустам Алекжі"},
-            //    };
+            List<Guest> guests = new List<Guest>()
+                {
+                    new Guest(){CompanyID = 1, Name = "Іван Василів"},
+                    new Guest(){CompanyID = 1, Name = "Петро Симонович"},
+                    new Guest(){CompanyID = 2, Name = "Василь Пупкін"},
+                    new Guest(){CompanyID = 3, Name = "Сергій Іванов"},
+                    new Guest(){CompanyID = 2, Name = "Роман Пушко"},
+                    new Guest(){CompanyID = 1, Name = "Станіслав Мотужко"},
+                    new Guest(){CompanyID = 1, Name = "Рустам Алекжі"},
+                };
 
-            //await context.GetGuests.AddRangeAsync(guests);
-            //await context.SaveChangesAsync();
+            await context.GetGuests.AddRangeAsync(guests);
+            await context.SaveChangesAsync();
 
             /// <summary>
-            /// Усіх гостей, які живуть від компанії ExpertSolution
+            /// All guests who live with the ExpertSolution company
             /// </summary>
             //var guestExpertSolutionAllAsync = await context.GetGuests
             //    .Join(context.GetCompanies.Where(c => c.CompanyName == "ExpertSolution"),
@@ -48,7 +48,7 @@ public class Program
             //   .ToListAsync();
 
             /// < summary >
-            /// Усі компанії із зазначенням кількості людей, які живуть від них, відсортованих за зменшенням кількості гостей
+            /// All companies, based on the number of people who live with them, are sorted after a change in the number of guests
             /// </ summary >
             ///                 not work
             //var сompaniesAllAsync = await context.GetCompanies
@@ -62,7 +62,7 @@ public class Program
             //    .ToListAsync();
 
             /// < summary >
-            /// Усі компанії, для яких є гості з прізвищем, що закінчується на "ко". У результат вивести список таких компаній, без даних гостя.
+            /// All companies, for which there are guests with a nickname that ends in “ko”. The result will display a list of such companies, without guest data.
             /// </ summary >
             //var сompaniesAllWithKoAsync = await context.GetCompanies
             //    .Join(context.GetGuests.Where(p => p.Name.Substring(p.Name.Length - 2) == "ко"),
@@ -75,7 +75,7 @@ public class Program
             //    .ToListAsync();
 
             /// < summary >
-            /// Усі компанії та гостей, які проживають від них. У результаті має виводитися назва компанії, список імен гостей через кому. Для виведення результату використовувати клас CompanyDTO3
+            /// All companies and guests who live with them. The result may display the name of the company, a list of names of guests via whom. To view the results of the vikory class CompanyDTO3
             /// </ summary >
             ///                 not work
             //var сompaniesAllAsync = await context.GetCompanies

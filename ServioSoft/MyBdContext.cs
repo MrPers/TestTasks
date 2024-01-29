@@ -9,7 +9,6 @@ namespace ServioSoft
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Server=KHOTSKYI;Database=TestDb;User Id=sa;Password=9391zif3500; Encrypt=False;Trusted_Connection=True;");
             optionsBuilder.UseSqlServer(@"Server=KHOTSKYI;Database=TestDb;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 

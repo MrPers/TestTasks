@@ -16,13 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rickandmorty", "Rickandmort
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "USD", "USD", "{A5BA7391-A7CB-4CF6-BC08-E2BF30C7F1CF}"
 	ProjectSection(SolutionItems) = preProject
-		UDS\Test-task-Dynamics-Education.pdf = UDS\Test-task-Dynamics-Education.pdf
+		USDconditions.txt = USDconditions.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServioSoft", "ServioSoft", "{DD18851E-949C-45B3-B226-D0884117D531}"
-	ProjectSection(SolutionItems) = preProject
-		ServioSoft\README.txt = ServioSoft\README.txt
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rickandmorty.Api", "Rickandmorty.Api\Rickandmorty.Api.csproj", "{DE6814F3-D1DF-416D-A319-216959724765}"
 EndProject
@@ -35,8 +32,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rickandmorty.Entity", "Rickandmorty.Entity\Rickandmorty.Entity.csproj", "{02029BA8-BAEE-425A-A420-A29FD0E21128}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rickandmorty.Logic", "Rickandmorty.Logic\Rickandmorty.Logic.csproj", "{B46C8C8A-115E-4760-B386-11892DDDD103}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BinaryTreeGenerics", "BinaryTreeGenerics", "{4776DE3F-1598-40F1-9312-818417A2F2B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryTreeGenerics", "BinaryTreeGenerics\BinaryTreeGenerics.csproj", "{CBEE6D6B-A823-4E40-B94B-FE73D7605437}"
 EndProject
@@ -56,14 +51,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "epam", "epam", "{F7986C4E-B59F-44A4-B959-56F83B531143}"
 	ProjectSection(SolutionItems) = preProject
-		README.txt = README.txt
+		EPAMconditions.txt = EPAMconditions.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Services", "Northwind.Services\Northwind.Services.csproj", "{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Services", "Northwind.Services\Northwind.Services.csproj", "{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Services.Ado", "Northwind.Services.Ado\Northwind.Services.Ado.csproj", "{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Services.Ado", "Northwind.Services.Ado\Northwind.Services.Ado.csproj", "{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Services.Ado.Tests", "Northwind.Services.Ado.Tests\Northwind.Services.Ado.Tests.csproj", "{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Services.Ado.Tests", "Northwind.Services.Ado.Tests\Northwind.Services.Ado.Tests.csproj", "{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,7 +154,7 @@ Global
 		{1329B817-98D6-4774-9953-F3AC387067F3} = {4646838A-B931-46AC-BBEA-462897181573}
 		{02029BA8-BAEE-425A-A420-A29FD0E21128} = {4646838A-B931-46AC-BBEA-462897181573}
 		{B46C8C8A-115E-4760-B386-11892DDDD103} = {4646838A-B931-46AC-BBEA-462897181573}
-		{CBEE6D6B-A823-4E40-B94B-FE73D7605437} = {4776DE3F-1598-40F1-9312-818417A2F2B2}
+		{CBEE6D6B-A823-4E40-B94B-FE73D7605437} = {CDF40E53-FCC0-4106-8450-7C1434925DB9}
 		{9FFF2D75-23CD-4EC3-A665-B136A27B3C5B} = {CDF40E53-FCC0-4106-8450-7C1434925DB9}
 		{39285D34-687E-4799-A475-448811368FC3} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
 		{72D19A3A-6AF9-4CA5-87EC-252328A81F0A} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
