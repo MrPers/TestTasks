@@ -60,6 +60,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Services.Ado", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Services.Ado.Tests", "Northwind.Services.Ado.Tests\Northwind.Services.Ado.Tests.csproj", "{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeeksForLess", "GeeksForLess", "{96D379BB-A4A4-4D9A-862F-33DDAB674D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeeksForLessMVC", "GeeksForLessMVC\GeeksForLessMVC.csproj", "{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -140,6 +144,10 @@ Global
 		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,6 +171,7 @@ Global
 		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D} = {F7986C4E-B59F-44A4-B959-56F83B531143}
 		{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B} = {F7986C4E-B59F-44A4-B959-56F83B531143}
 		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1} = {F7986C4E-B59F-44A4-B959-56F83B531143}
+		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC} = {96D379BB-A4A4-4D9A-862F-33DDAB674D2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0B254F9-0276-446A-84DC-B6B36CB220F8}

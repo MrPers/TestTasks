@@ -8,43 +8,43 @@ namespace BinaryTreeGenerics
 {
     class BinaryTree
     {
-        public class BinaryNode //узел дерева
+        public class BinaryNode
         {
-            public BinaryNode left { get; set; } //указатели узла
+            public BinaryNode left { get; set; }
             public BinaryNode right { get; set; }
-            public int value; //вставляемое значение
+            public int value;
 
             public BinaryNode(int val)
             {
-                value = val; //конструктор заполняет узел значением
+                value = val;
                 left = null;
                 right = null;
             }
         }
 
-        public BinaryNode root; //корень дерева
-        public BinaryTree() //конструктор (по умолчанию) создания дерева
+        public BinaryNode root;
+        public BinaryTree()
         {
-            root = null; //при создании корень не определен
+            root = null;
         }
 
         public BinaryTree(int value)
         {
-            root = new BinaryNode(value); //если изначально задаём корневое значение
+            root = new BinaryNode(value);
         }
 
-        //нерекурсивное добавление
-        public void Add(int value) //узел и его значение
+        //non-recursive addition
+        public void Add(int value) //node and its meaning
         {
-            if (root == null)  //если корня нет
+            if (root == null)  //if there is no root
             {
-                root = new BinaryNode(value); //добавляем элемент как корневой
+                root = new BinaryNode(value); //add the element as root
                 return;
             }
 
-            BinaryNode current = root; //текущий равен корневому
+            BinaryNode current = root; //current is equal to root
             bool added = false;
-            //обходим дерево
+            //we go around the tree
             do
             {
                 TreeTraversal(value, ref current, ref added);
@@ -54,7 +54,7 @@ namespace BinaryTreeGenerics
 
         private static void TreeTraversal(int value, ref BinaryNode current, ref bool added)
         {
-            if (value >= current.value)  //идём вправо
+            if (value >= current.value)  //let's go right
             {
                 if (current.right == null)
                 {
@@ -69,7 +69,7 @@ namespace BinaryTreeGenerics
                 }
 
             }
-            if (value < current.value) //идём влево
+            if (value < current.value) //let's go left
             {
                 if (current.left == null)
                 {

@@ -1,0 +1,32 @@
+﻿@model GeeksForLessMVC.Models.TreeElement
+
+
+@{
+    if (String.IsNullOrEmpty(Model.Name))
+    {
+        <span>Root :</span>
+    }
+    else
+    {
+        <span>@Model.Name :</span>
+    }
+}
+</span>
+@if (Model.Childrens.Any())
+{
+    <ul class="nested">
+        @foreach (var child in Model.Childrens)
+        {
+            <li>
+                @await Html.PartialAsync("Display", child)
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <span>@Model.Value;
+    </span>
+}
+
+    
