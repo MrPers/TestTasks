@@ -11,15 +11,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USDTest", "USDTest\USDTest.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rickandmorty", "Rickandmorty", "{4646838A-B931-46AC-BBEA-462897181573}"
 	ProjectSection(SolutionItems) = preProject
-		Task.txt = Task.txt
+		RickandmortyСonditions.txt = RickandmortyСonditions.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "USD", "USD", "{A5BA7391-A7CB-4CF6-BC08-E2BF30C7F1CF}"
 	ProjectSection(SolutionItems) = preProject
-		USDconditions.txt = USDconditions.txt
+		USDConditions.txt = USDConditions.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServioSoft", "ServioSoft", "{DD18851E-949C-45B3-B226-D0884117D531}"
+	ProjectSection(SolutionItems) = preProject
+		ServioSoftConditions.txt = ServioSoftConditions.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rickandmorty.Api", "Rickandmorty.Api\Rickandmorty.Api.csproj", "{DE6814F3-D1DF-416D-A319-216959724765}"
 EndProject
@@ -39,19 +42,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmallTasks", "SmallTasks", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelayedStreams", "DelayedStreams\DelayedStreams.csproj", "{9FFF2D75-23CD-4EC3-A665-B136A27B3C5B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Indentity", "Indentity", "{A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indentity", "Indentity\Indentity.csproj", "{39285D34-687E-4799-A475-448811368FC3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{72D19A3A-6AF9-4CA5-87EC-252328A81F0A}"
-EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Angular", "Angular\Angular.esproj", "{AC8E292C-3EC9-4393-AC23-F3AA3904141E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{93D33413-3DBA-4E50-97C5-D621670A54F5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "epam", "epam", "{F7986C4E-B59F-44A4-B959-56F83B531143}"
 	ProjectSection(SolutionItems) = preProject
-		EPAMconditions.txt = EPAMconditions.txt
+		EPAMСonditions.txt = EPAMСonditions.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Services", "Northwind.Services\Northwind.Services.csproj", "{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}"
@@ -61,8 +54,13 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Services.Ado.Tests", "Northwind.Services.Ado.Tests\Northwind.Services.Ado.Tests.csproj", "{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeeksForLess", "GeeksForLess", "{96D379BB-A4A4-4D9A-862F-33DDAB674D2C}"
+	ProjectSection(SolutionItems) = preProject
+		GFLConditions.txt = GFLConditions.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeeksForLessMVC", "GeeksForLessMVC\GeeksForLessMVC.csproj", "{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationTokenExampl", "CancellationToken\CancellationTokenExampl.csproj", "{3CF82A2A-3DC1-425F-A541-B1F7A32F46B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,24 +112,6 @@ Global
 		{9FFF2D75-23CD-4EC3-A665-B136A27B3C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FFF2D75-23CD-4EC3-A665-B136A27B3C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FFF2D75-23CD-4EC3-A665-B136A27B3C5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39285D34-687E-4799-A475-448811368FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39285D34-687E-4799-A475-448811368FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39285D34-687E-4799-A475-448811368FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39285D34-687E-4799-A475-448811368FC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72D19A3A-6AF9-4CA5-87EC-252328A81F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72D19A3A-6AF9-4CA5-87EC-252328A81F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72D19A3A-6AF9-4CA5-87EC-252328A81F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72D19A3A-6AF9-4CA5-87EC-252328A81F0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC8E292C-3EC9-4393-AC23-F3AA3904141E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC8E292C-3EC9-4393-AC23-F3AA3904141E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC8E292C-3EC9-4393-AC23-F3AA3904141E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{AC8E292C-3EC9-4393-AC23-F3AA3904141E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC8E292C-3EC9-4393-AC23-F3AA3904141E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC8E292C-3EC9-4393-AC23-F3AA3904141E}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{93D33413-3DBA-4E50-97C5-D621670A54F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93D33413-3DBA-4E50-97C5-D621670A54F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93D33413-3DBA-4E50-97C5-D621670A54F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93D33413-3DBA-4E50-97C5-D621670A54F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -148,6 +128,10 @@ Global
 		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF82A2A-3DC1-425F-A541-B1F7A32F46B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF82A2A-3DC1-425F-A541-B1F7A32F46B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF82A2A-3DC1-425F-A541-B1F7A32F46B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF82A2A-3DC1-425F-A541-B1F7A32F46B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,14 +148,11 @@ Global
 		{B46C8C8A-115E-4760-B386-11892DDDD103} = {4646838A-B931-46AC-BBEA-462897181573}
 		{CBEE6D6B-A823-4E40-B94B-FE73D7605437} = {CDF40E53-FCC0-4106-8450-7C1434925DB9}
 		{9FFF2D75-23CD-4EC3-A665-B136A27B3C5B} = {CDF40E53-FCC0-4106-8450-7C1434925DB9}
-		{39285D34-687E-4799-A475-448811368FC3} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
-		{72D19A3A-6AF9-4CA5-87EC-252328A81F0A} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
-		{AC8E292C-3EC9-4393-AC23-F3AA3904141E} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
-		{93D33413-3DBA-4E50-97C5-D621670A54F5} = {A09B3D2C-B0B1-48F5-96B2-B023DD9B8384}
 		{C2EE287C-20DA-4F7D-8D7E-ECADCBF5900D} = {F7986C4E-B59F-44A4-B959-56F83B531143}
 		{A5C4F9A9-9AB7-4F5A-A575-FDF7BFF1DF0B} = {F7986C4E-B59F-44A4-B959-56F83B531143}
 		{1419C11D-D7F4-44B6-B1E4-07CAE452BDD1} = {F7986C4E-B59F-44A4-B959-56F83B531143}
 		{1DA1825E-23AE-42E4-BD7B-D5B4670940AC} = {96D379BB-A4A4-4D9A-862F-33DDAB674D2C}
+		{3CF82A2A-3DC1-425F-A541-B1F7A32F46B0} = {CDF40E53-FCC0-4106-8450-7C1434925DB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0B254F9-0276-446A-84DC-B6B36CB220F8}
